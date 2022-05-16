@@ -7,14 +7,14 @@ function snapCrackle(MaxValue) {
     if (i % 2 != 0) {
         resultado.push('snap')
     }
-    if (i / 5 == 0) {
+    if (i % 5 == 0) {
         resultado.push('Crackle')
     }
-    if (i % 2 == 0 && i / 5 != 0) {
+    if (i % 2 == 0 && i % 5 != 0) {
         resultado.push(i)
     }
   }
-  return resultado;
+  return resultado.join(', ');
 }
 
 console.log(snapCrackle(150))
